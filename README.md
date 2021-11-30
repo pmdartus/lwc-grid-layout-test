@@ -1,6 +1,6 @@
-# LWC boilerplate
+# LWC grid layout experiment
 
-The most barebone LWC setup for simple experiments and bug reproductions.
+Simple grid layout experimentation with LWC.
 
 ```sh
 $ npm run build             # Build app
