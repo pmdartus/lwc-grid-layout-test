@@ -1,0 +1,28 @@
+<template>
+    <h1>Grid example</h1>
+
+    <x-grid columns="12" row-height="50">
+        <x-grid-item x="1" y="1" w="6" h="5">
+            <h2>Hello grid</h2>
+        </x-grid-item>
+        <x-grid-item x="8" y="1" w="5" h="3">
+            Some more text
+        </x-grid-item>
+        <x-grid-item x="7" y="1" h="4">
+            <b>This item is out of order</b>
+        </x-grid-item>
+
+        <x-grid-item x="1" y="6" w="4" h="3">
+            <b>Here is a mega promo</b>
+        </x-grid-item>
+        <x-grid-item x="7" y="5" w="4" h="3">
+            <i>What about another promo</i>
+        </x-grid-item>
+        <x-grid-item x="11" y="4" w="2" h="4">
+            I am there
+        </x-grid-item>
+        <x-grid-item x="8" y="4" w="3">
+            But also here
+        </x-grid-item>
+    </x-grid>
+</template>
