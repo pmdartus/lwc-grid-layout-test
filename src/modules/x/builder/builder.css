@@ -1,0 +1,27 @@
+.palette {
+    display: flex;
+}
+
+.image-cmp {
+    background: chartreuse;
+}
+
+.text-cmp {
+    background: coral;
+}
+
+.palette div {
+    display: flex;
+    align-items: center;
+    border: 1px solid gray;
+    margin: 5px;
+    padding: 5px;
+    cursor: grab;
+}
+
+.palette div span {
+    display: block;
+    width: 10px;
+    height: 10px;
+    margin-right: 5px;
+}

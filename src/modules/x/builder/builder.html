@@ -4,7 +4,7 @@
         <input
             id="tab-count"
             type="number"
-            value={tabCount}
+            value={tabs.length}
             min="0"
             max="10"
             onchange={handleTabCountChange}
@@ -13,10 +13,26 @@
 
     <hr />
 
+    <div class="palette">
+        <template for:each={components} for:item="component">
+            <div key={component.id} data-id={component.id} draggable="true" ondragstart={handleComponentDrag}>
+                <span class={component.className}></span>
+                {component.label}
+            </div>
+        </template>
+    </div>
+
+    <hr />
+
     <x-tabset>
         <template for:each={tabs} for:item="tab">
             <x-tab label={tab.label} key={tab.id} data-id={tab.id}>
-                <h2>{tab.content}</h2>
+                <template if:true={tab.component}>
+                    <x-dynamic lwc:dynamic={tab.component}></x-dynamic>
+                </template>
+                <template if:false={tab.component}>
+                    <x-placeholder oncomponentdrop={handleComponentDrop}></x-placeholder>
+                </template>
             </x-tab>
         </template>
     </x-tabset>
