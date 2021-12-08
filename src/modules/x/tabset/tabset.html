@@ -1,0 +1,10 @@
+<template>
+    <ul>
+        <template for:each={labels} for:item="label">
+            <li key={label.key} data-id={label.key} onclick={handleLabelClick}>{label.value}</li>
+        </template>
+    </ul>
+    <div class="wrapper">
+        <slot onslotchange={handleSlotChange}></slot>
+    </div>
+</template>

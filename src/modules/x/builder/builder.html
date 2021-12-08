@@ -1,0 +1,23 @@
+<template>
+    <label>
+        Tab count
+        <input
+            id="tab-count"
+            type="number"
+            value={tabCount}
+            min="0"
+            max="10"
+            onchange={handleTabCountChange}
+        />
+    </label>
+
+    <hr />
+
+    <x-tabset>
+        <template for:each={tabs} for:item="tab">
+            <x-tab label={tab.label} key={tab.id} data-id={tab.id}>
+                <h2>{tab.content}</h2>
+            </x-tab>
+        </template>
+    </x-tabset>
+</template>
